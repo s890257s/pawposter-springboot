@@ -29,7 +29,6 @@ CREATE TABLE [pet_vote](
     [vote_id] int IDENTITY(1, 1) NOT NULL,
     [pet_id] int,
     [member_id] int,
-    [vote_type] int,
-    -- 1 表讚, 0 表倒讚
+    [vote_type] int, -- 1 表讚, 0 表倒讚
     [vote_date] DATE
 );
