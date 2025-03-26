@@ -24,5 +24,4 @@ public class AuthController {
 	public AuthDto login(@ModelAttribute AccountPassword info) {
 		return authService.login(info);
 	}
-
 }

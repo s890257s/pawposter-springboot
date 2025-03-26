@@ -30,5 +30,6 @@ CREATE TABLE [pet_vote](
     [pet_id] int,
     [member_id] int,
     [vote_type] int, -- 1 表讚, 0 表倒讚
-    [vote_date] DATE
+    [vote_date] DATE,
+    [updated] DATE
 );

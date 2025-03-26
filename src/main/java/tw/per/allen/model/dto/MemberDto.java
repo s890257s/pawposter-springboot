@@ -6,11 +6,13 @@ import org.springframework.beans.BeanUtils;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import tw.per.allen.model.entity.Member;
 import tw.per.allen.utils.DateUtil;
 
 @Setter
 @Getter
+@ToString
 public class MemberDto {
 
 	public MemberDto(Member entity) {
