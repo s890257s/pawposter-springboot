@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import tw.per.allen.model.dto.AuthDto;
 import tw.per.allen.model.dto.record.AccountPassword;
 import tw.per.allen.service.AuthService;
+import tw.per.allen.utils.JwtUtil;
 
 /**
  * 權限相關
@@ -23,5 +24,10 @@ public class AuthController {
 	@GetMapping("/login")
 	public AuthDto login(@ModelAttribute AccountPassword info) {
 		return authService.login(info);
+	}
+
+	@GetMapping("/test")
+	public String login() {
+		return JwtUtil.generateToken("1");
 	}
 }

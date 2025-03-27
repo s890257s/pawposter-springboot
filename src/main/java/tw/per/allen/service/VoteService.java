@@ -33,12 +33,14 @@ public class VoteService {
 		// 若相等則刪除
 		if (petVote.getVoteType() == voteState.typeNumber) {
 			petVoteRepository.delete(petVote);
+			petVoteRepository.flush();
 			return VoteState.NOT_VOTE;
 		}
 
-		// 剩下的則是不相等
-		petVoteRepository.delete(petVote);
-		
+		// 剩下的則是不相等，修改投票類型
+		petVote.setVoteType(voteState.typeNumber);
+		petVote.setVoteDate(new Date());
+		petVoteRepository.save(petVote);
 
 		return voteState;
 	}
