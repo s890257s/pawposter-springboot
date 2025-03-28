@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import tw.per.allen.config.MemberHolder;
 import tw.per.allen.model.dto.PetDto;
 import tw.per.allen.model.enums.VoteState;
-import tw.per.allen.security.MemberHolder;
 import tw.per.allen.service.PetService;
 import tw.per.allen.service.VoteService;
 
 @RestController
-@RequestMapping("/pets")
+@RequestMapping("/api/pets")
 public class PetController {
 
 	@Autowired

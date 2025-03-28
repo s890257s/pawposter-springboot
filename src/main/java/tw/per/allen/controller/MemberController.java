@@ -11,7 +11,7 @@ import tw.per.allen.model.dto.MemberDto;
 import tw.per.allen.service.MemberService;
 
 @RestController
-@RequestMapping("/members")
+@RequestMapping("/api/members")
 public class MemberController {
 
 	@Autowired

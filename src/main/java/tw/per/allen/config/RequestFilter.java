@@ -1,4 +1,4 @@
-package tw.per.allen.security;
+package tw.per.allen.config;
 
 import java.io.IOException;
 

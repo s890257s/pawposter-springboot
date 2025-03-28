@@ -8,13 +8,13 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import tw.per.allen.config.MemberHolder;
 import tw.per.allen.model.dto.MemberDto;
 import tw.per.allen.model.dto.PetDto;
 import tw.per.allen.model.entity.PetVote;
 import tw.per.allen.model.enums.VoteState;
 import tw.per.allen.repository.PetRepository;
 import tw.per.allen.repository.PetVoteRepository;
-import tw.per.allen.security.MemberHolder;
 
 @Service
 public class PetService {
