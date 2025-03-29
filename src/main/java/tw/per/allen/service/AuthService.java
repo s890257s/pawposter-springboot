@@ -6,6 +6,7 @@ import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import tw.per.allen.exception.LoginFailException;
 import tw.per.allen.model.dto.AuthDto;
 import tw.per.allen.model.dto.record.AccountPassword;
 import tw.per.allen.model.entity.Member;
@@ -25,7 +26,7 @@ public class AuthService {
 
 		Member member = memberRepository.findByMemberAccount(info.account());
 
-		RuntimeException loginFail = new RuntimeException("帳號或密碼錯誤");
+		LoginFailException loginFail = new LoginFailException("帳號或密碼錯誤");
 
 		if (member == null) {
 			throw loginFail;

@@ -1,5 +1,6 @@
 package tw.per.allen.model.entity;
 
+import java.util.Arrays;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
